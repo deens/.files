@@ -1,0 +1,13 @@
+Bundle "tomtom/tcomment_vim.git"
+
+Bundle "sjl/gundo.vim"
+
+Bundle "goldfeld/ctrlr.vim"
+
+Bundle "Shougo/neocomplete.git"
+
+Bundle 'majutsushi/tagbar'
+
+Bundle 'tpope/vim-vinegar'
+
+Bundle 'Raimondi/delimitMate'

@@ -1,0 +1,7 @@
+" Color Themes
+
+Bundle "morhetz/gruvbox"
+Bundle 'croaky/vim-colors-github'
+Bundle "chrisbra/color_highlight.git"
+Bundle "endel/vim-github-colorscheme.git"
+Bundle "itchyny/lightline.vim"
