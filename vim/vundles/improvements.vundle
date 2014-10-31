@@ -11,3 +11,5 @@ Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-vinegar'
 
 Bundle 'Raimondi/delimitMate'
+
+Bundle 'tpope/vim-surround'
