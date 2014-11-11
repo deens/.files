@@ -6,7 +6,10 @@ config windowHintsTopLeftX (windowSizeX/2)-(windowHintsWidth/2)
 config windowHintsTopLeftY (windowSizeY/2)-(windowHintsHeight/2)
 config windowHintsIgnoreHiddenWindows false
 
-# General aliases
+# Key aliases
+alias hyper ctrl;shift;alt;cmd
+
+# Screen aliases
 alias sox screenOriginX
 alias soy screenOriginY
 alias ssx screenSizeX
@@ -25,47 +28,43 @@ alias bottomLeftQuarter ${sox};${soy}+${ssy}/2 ${ssx}/2;${ssy}/2
 alias bottomRightQuarter ${sox}+${ssx}/2;${soy}+${ssy}/2 ${ssx}/2;${ssy}/2
 
 # Application aliases
-alias adiumContacts3 move ${sox};${soy} ${ssx}/10;${ssy} 0
-alias adiumChat3 move ${topRightQuarter} 0
+alias browser   'Google Chrome'
+alias editor    'MacVim'
+alias dbclient  'Sequel Pro'
+alias terminal  'iTerm'
 
-# 1 monitor layout
-layout oneScreen 'Adium':TITLE_ORDER='Contacts' move ${sox};${soy} ${ssx}/9;${ssy}
-layout oneScreen 'Spotify' move ${fullscreen}
-layout oneScreen 'Google Chrome' move ${fullscreen}
-layout threeScreen 'MacVim' move ${rightHalf}
-layout threeScreen 'iTerm' move ${leftHalf}
+# Position bindings
+bind g:${hyper} move ${centered}
+bind o:${hyper} move ${fullscreen}
 
-# 3 monitor layout
-layout threeScreen 'Adium':TITLE_ORDER='Contacts' ${adiumContacts3} | ${adiumChat3}
-layout threeScreen 'Spotify' move ${fullscreen} 0
-layout threeScreen 'TextMate' move ${rightHalf} 0
-layout threeScreen 'Google Chrome' move ${rightHalf} 2
-layout threeScreen 'MacVim' move ${fullscreen} 1
-layout threeScreen 'iTerm' move ${leftHalf} 2
+bind h:${hyper} move ${leftHalf}
+bind j:${hyper} move ${bottomHalf}
 
-# Bindings
-bind g:ctrl;alt move ${centered}
-bind o:ctrl;alt move ${fullscreen}
-bind h:ctrl;alt move ${leftHalf}
-bind j:ctrl;alt move ${bottomHalf}
-bind k:ctrl;alt move ${topHalf}
-bind l:ctrl;alt move ${rightHalf}
-bind u:ctrl;alt move ${topLeftQuarter}
-bind i:ctrl;alt move ${topRightQuarter}
-bind n:ctrl;alt move ${bottomLeftQuarter}
-bind m:ctrl;alt move ${bottomRightQuarter}
+bind k:${hyper} move ${topHalf}
+bind l:${hyper} move ${rightHalf}
 
-bind ;:ctrl;alt throw previous
-bind /:ctrl;alt hint ASDFJKLGHWERTYUIO
-bind 1:ctrl;alt layout oneScreen
-bind 3:ctrl;alt layout threeScreen
+bind u:${hyper} move ${topLeftQuarter}
+bind i:${hyper} move ${topRightQuarter}
 
-bind right:ctrl;alt resize +10% +0
-bind left:ctrl;alt  resize -10% +0
-bind up:ctrl;alt    resize +0 -10%
-bind down:ctrl;alt  resize +0 +10%
+bind n:${hyper} move ${bottomLeftQuarter}
+bind m:${hyper} move ${bottomRightQuarter}
 
-bind right:ctrl;alt nudge +10% +0
-bind left:ctrl;alt  nudge -10% +0
-bind up:ctrl;alt    nudge +0 -10%
-bind down:ctrl;alt  nudge +0 +10%
+## App bindings
+bind e:${hyper}      focus ${editor}
+bind b:${hyper}      focus ${browser}
+bind t:${hyper}      focus ${terminal}
+
+# Location bindings
+bind ;:${hyper} throw next
+bind /:${hyper} hint ASDFJKLGHWERTYUIO
+
+# Resizing bingings
+bind right:${hyper} resize +10% +0
+bind left:${hyper}  resize -10% +0
+bind up:${hyper}    resize +0 -10%
+bind down:${hyper}  resize +0 +10%
+
+bind right:${hyper} nudge +10% +0
+bind left:${hyper}  nudge -10% +0
+bind up:${hyper}    nudge +0 -10%
+bind down:${hyper}  nudge +0 +10%
