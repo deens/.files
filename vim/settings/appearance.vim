@@ -6,13 +6,12 @@ colorscheme gruvbox
 set background=dark
 
 " GUI Theme
-" colorscheme github
+" colorscheme github256
 " set background=light
 
 if has("gui_running")
     "tell the term has 256 colors
     set t_Co=256
-
 
     let g:gruvbox_italic=1
 
@@ -25,16 +24,19 @@ if has("gui_running")
     set columns=190
 
     " FONTS:
-    " set guifont=Inconsolata:h20,Monaco:h17
-    " set guifont=Menlo:h18,Inconsolata:h20,Monaco:h17
-    set guifont=Source\ Code\ Pro\ Light:h17,Inconsolata\ XL:h17,Inconsolata:h20,Monaco:h17
+    set guifont=Source\ Code\ Pro\ Light:h16,Inconsolata\ XL:h16,Inconsolata:h16,Monaco:h16
 else
     " dont load csapprox if we no gui support - silences an annoying warning
-
     let g:CSApprox_loaded = 1
 endif
 
-"Show status line
+" Show status line, (tpope)
 set laststatus=2
-set statusline=%<%f\ %h%m%r%=%{fugitive#statusline()}\ \ %-14.(%l,%c%V%)\ %P
-
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%{SL('CapsLockStatusline')}%y%{SL('fugitive#statusline')}%#ErrorMsg#%{SL('SyntasticStatuslineFlag')}%*%=%-14.(%l,%c%V%)\ %P
+function! SL(function)
+    if exists('*'.a:function)
+        return call(a:function,[])
+    else
+        return ''
+    endif
+endfunction
