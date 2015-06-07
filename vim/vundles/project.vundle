@@ -1,3 +1,0 @@
-Bundle "scrooloose/nerdtree.git"
-Bundle "jistr/vim-nerdtree-tabs.git"
-Bundle "kien/ctrlp.vim"
