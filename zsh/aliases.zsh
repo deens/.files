@@ -1,11 +1,9 @@
-# VirtualBoxes
-alias vm='ssh vagrant@127.0.0.1 -p 2222'
-
 #Homestead
-alias shs="cd ~/Homestead && vagrant up && cd -"
+alias svm="homestead up"
+alias vm='homestead ssh'
+alias vme='homestead edit'
 
 #laravel
-alias artisan="php artisan"
 alias a="php artisan"
 
 #PHP Testing
@@ -13,12 +11,18 @@ alias a="php artisan"
 alias phpunit="vendor/bin/phpunit"
 
 #Spec
-alias ps="vendor/bin/phpspec"
-alias psr="vendo/bin/phpspec run"
+alias phpspec="vendor/bin/phpspec"
+alias psr="vendor/bin/phpspec run"
 alias psd="vendor/bin/phpspec describe"
 
 #Codeception
+alias codecept="vendor/bin/codecept"
 alias cc="vendor/bin/codecept"
+
+# Behat
+alias behat="vendor/bin/behat";
+alias bhi="vendor/bin/behat --init"
+alias bhr="vendor/bin/behat run"
 
 # Git Aliases
 alias gs='git status'
@@ -76,4 +80,3 @@ alias gsmu='git submodule update'
 alias gt='git t'
 alias gbg='git bisect good'
 alias gbb='git bisect bad'
-
