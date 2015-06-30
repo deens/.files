@@ -1,15 +1,16 @@
 Bundle "tomtom/tcomment_vim.git"
 
 Bundle "sjl/gundo.vim"
-
 Bundle "goldfeld/ctrlr.vim"
-
+Bundle "tacahiroy/ctrlp-funky"
 Bundle "Shougo/neocomplete.git"
-
 Bundle 'majutsushi/tagbar'
-
 Bundle 'tpope/vim-vinegar'
-
 Bundle 'Raimondi/delimitMate'
-
 Bundle 'tpope/vim-surround'
+Bundle "scrooloose/nerdtree.git"
+Bundle "jistr/vim-nerdtree-tabs.git"
+Bundle "kien/ctrlp.vim"
+Bundle "rizzatti/dash.vim"
+
+Bundle "ervandew/supertab"

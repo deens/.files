@@ -9,21 +9,36 @@ Bundle "skwp/vim-html-escape"
 Bundle 'othree/html5.vim'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'mattn/emmet-vim'
+Bundle 'chrisbra/Colorizer'
 
 " Snippets
-" Bundle "MarcWeber/vim-addon-mw-utils"
-" Bundle "tomtom/tlib_vim"
-" Bundle "garbas/vim-snipmate"
-
 Bundle 'SirVer/ultisnips'
 Bundle "honza/vim-snippets"
 
 " PHP
+" Improve"
 Bundle 'StanAngeloff/php.vim'
 Bundle 'shawncplus/phpcomplete.vim'
+
+" Namespaces
 Bundle 'arnaud-lb/vim-php-namespace'
+
+" Indentantion
 Bundle '2072/PHP-Indenting-for-VIm'
+
+" Documentor
+"Bundle 'tobyS/pdv'
+
+"Testing
+Bundle 'Herzult/phpspec-vim'
+
+" Bundle 'joonty/vim-phpqa.git'
 
 " Laravel 
 Bundle 'xsbeats/vim-blade'
-Bundle 'markwu/vim-laravel4-snippets'
+
+" Markdown
+Bundle 'tpope/vim-markdown'
+
+"Rust
+Bundle 'wting/rust.vim'
