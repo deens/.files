@@ -10,7 +10,7 @@ nnoremap ,yw yiww
 
 " ,ow = 'overwrite word', replace a word with what's in the yank buffer
 " FIXME: will not properly repeat when you use a dot (tie into repeat.vim)
-nnoremap ,ow "_diwhp
+" nnoremap ,ow "_diwhp
 
 "make Y consistent with C and D
 nnoremap Y y$
@@ -76,6 +76,10 @@ map ,` ysiw`
 
 " gary bernhardt's hashrocket
 imap <c-l> <space>=><space>
+" create ->  using Ctrl-k in edit mode
+imap <silent> <D-k> -><Esc>3hi
+" create <%= foo %> erb tags using Ctrl-j in edit mode
+imap <silent> <D-j> {{ }}<Esc>2hi
 
 " Change inside various enclosures with Cmd-" and Cmd-'
 " The f makes it find the enclosure so you don't have
@@ -121,11 +125,9 @@ autocmd FileType rspec map <buffer> <D-k> {
 autocmd FileType javascript map <buffer> <D-k> }
 autocmd FileType javascript map <buffer> <D-j> {
 
-
 " Command-/ to toggle comments
 map <D-/> :TComment<CR>
 imap <D-/> <Esc>:TComment<CR>i
-
 
 "Move back and forth through previous and next buffers
 "with ,z and ,x
@@ -147,7 +149,7 @@ nnoremap <C-w>f :sp +e<cfile><CR>
 nnoremap <C-w>gf :tabe<cfile><CR>
 
 " Zoom in and out of current window with ,gz
-map <silent> ,gz <C-w>o
+" map <silent> ,gz <C-w>o
 
 " Use numbers to pick the tab you want (like iTerm)
 map <silent> <D-1> :tabn 1<cr>
@@ -172,11 +174,6 @@ nnoremap <D-Down> <C-w>-
 nnoremap <D-Left> <C-w><
 nnoremap <D-Right>  <C-w>>
 
-" create <%= foo %> erb tags using Ctrl-k in edit mode
-imap <silent> <C-K> <%=   %><Esc>3hi
-
-" create <%= foo %> erb tags using Ctrl-j in edit mode
-imap <silent> <C-J> <%  %><Esc>2hi
 
 " ============================
 " Shortcuts for everyday tasks
@@ -211,17 +208,17 @@ nnoremap ` '
 " Tabularize - alignment
 " ============================
 " Hit Cmd-Shift-A then type a character you want to align by
-nmap <D-A> :Tabularize /
-vmap <D-A> :Tabularize /
+" nmap <D-A> :Tabularize /
+" vmap <D-A> :Tabularize /
 
 " ============================
 " SplitJoin plugin
 " ============================
-nmap sj :SplitjoinSplit<cr>
-nmap sk :SplitjoinJoin<cr>
+" nmap sj :SplitjoinSplit<cr>
+" nmap sk :SplitjoinJoin<cr>
 
 " Get the current highlight group. Useful for then remapping the color
-map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
+" map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 
 " Source current file Cmd-% (good for vim development)
 map <D-%> :so %<CR>

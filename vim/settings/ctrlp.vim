@@ -6,7 +6,7 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 else
   " Fall back to using git ls-files if Ag is not available
-  let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+  let g:ctrlp_custom_ignore = 'node_modules\|\.git$\|\.hg$\|\.svn$'
   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
 endif
 
@@ -29,23 +29,6 @@ nnoremap <silent> <C-b> :CtrlPBuffer<cr>
 
 " Cmd-Shift-P to clear the cache
 nnoremap <silent> <D-P> :ClearCtrlPCache<cr>
-
-" Idea from : http://www.charlietanksley.net/blog/blog/2011/10/18/vim-navigation-with-lustyexplorer-and-lustyjuggler/
-" Open CtrlP starting from a particular path, making it much
-" more likely to find the correct thing first. mnemonic 'jump to [something]'
-map ,ja :CtrlP app/assets<CR>
-map ,jc :CtrlP app/controllers<CR>
-map ,jC :CtrlP app/commands<CR>
-map ,jcf :CtrlP app/config<CR>
-map ,jl :CtrlP app/lang<CR>
-map ,jm :CtrlP app/models<CR>
-map ,jM :CtrlP app/database/migrations<CR>
-map ,js :CtrlP app/database/seeds<CR>
-map ,jd :CtrlP app/database<CR>
-map ,jv :CtrlP app/views<CR>
-map ,jt :CtrlP app/tests<CR>
-map ,jp :CtrlP public<CR>
-map ,jV :CtrlP vendor<CR>
 
 "Cmd-Shift-(M)ethod - jump to a method (tag in current file)
 "Ctrl-m is not good - it overrides behavior of Enter
