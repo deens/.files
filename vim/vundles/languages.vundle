@@ -26,13 +26,8 @@ Bundle 'arnaud-lb/vim-php-namespace'
 " Indentantion
 Bundle '2072/PHP-Indenting-for-VIm'
 
-" Documentor
-"Bundle 'tobyS/pdv'
-
 "Testing
 Bundle 'Herzult/phpspec-vim'
-
-" Bundle 'joonty/vim-phpqa.git'
 
 " Laravel 
 Bundle 'xsbeats/vim-blade'
@@ -40,5 +35,4 @@ Bundle 'xsbeats/vim-blade'
 " Markdown
 Bundle 'tpope/vim-markdown'
 
-"Rust
-Bundle 'wting/rust.vim'
+Bundle 'stephpy/vim-php-cs-fixer'
