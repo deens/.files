@@ -3,7 +3,7 @@
 set nocompatible
 
 " ================ General Config ====================
-
+set encoding=utf8
 set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
