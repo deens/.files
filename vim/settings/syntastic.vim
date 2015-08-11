@@ -8,5 +8,8 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_messages = {'level': 'warnings'}
 
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-","<ion-", "</ion-"]
-let g:syntastic_php_phpcs_args="--report=csv --standard=".expand('<sfile>:p:h')."/.vim/misc/phpcs-modern-ruleset.xml"
-let g:syntastic_php_phpmd_post_args=expand('<sfile>:p:h')."/.vim/misc/phpmd-ruleset.xml"
+
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+let g:syntastic_php_phpcs_args="--report=csv --standard=".expand('<sfile>:p:h')."/misc/phpcs.xml"
+let g:syntastic_php_phpmd_post_args=expand('<sfile>:p:h')."/misc/phpmd.xml"
+
