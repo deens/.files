@@ -1,86 +1,67 @@
 My .files
 ========
 
+My dotfiles for Mac OS X, include ZSH, Prezto, iTerm, Tmux, Vim, Macvim, Slate.
+
 Software
---------
--Seil - Caps lock key 
-    https://pqrs.org/osx/karabiner/seil.html.en
--Karabiner - Keyboard customizer
-    https://pqrs.org/osx/karabiner/index.html.en
--Slate - Windows Manager
-    https://github.com/jigish/slate
--Iterm2 - Terminal Replacement
-    http://iterm2.com/
+-----------
+* [Seil] (https://pqrs.org/osx/karabiner/seil.html.en)
+* [Karabiner] (https://pqrs.org/osx/karabiner/index.html.en)
+* [Slate](https://github.com/jigish/slate)
+* [iTerm2](http://iterm2.com/)
+* [Homebrew](http://brew.sh/)
 
-ZSH Prezto
-----------
-https://github.com/sorin-ionescu/prezto
+Customize Keyboard
+------------------
 
-Mac Package Manager
---------------
-http://brew.sh/
+* Remap `"caps lock" to "esc"` using Seil, disable 
+* Remap `"fn" to "Hyper"` and `"Shift+Control+Option+Command" to "Hyper"` using Karabiner
+* Change key repeat with Karabiner `[Delay Until Repeat => 200, Key Repeat => 22]`
+* Remap Alfred to `Ctrl+Command+Space` disable spotlight shortcuts.
+* 
 
-Installing Packages, Vim and MacVim
----------------------------
-Packages
-	$ brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher
+Installing Homebrew Packages, Vim and MacVim
+--------------------------------------------
+#### Packages
 
-Vim
-    $ brew install vim --with-lua
+ `brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher`
 
-MacVim
-	$ brew install macvim --custom-icons --override-system-vim --with-lua --with-luajit
+#### Vim
 
-Create symbolic links
---------------------
+```bash
+brew install vim --with-lua
+```
 
-Vim
-    $ ln -s ~/.files/vimrc ~/.vimrc
-    $ ln -s ~/.files/vim ~/.vim
+#### MacVim
 
-Tmux
-    $ ln -s ~/.files/tmux/tmux.conf ~/.tmux.conf
+```bash
+brew install macvim --custom-icons --override-system-vim --with-lua --with-luajit
+```
 
-Slate
-    $ ln -s ~/.files/slate ~/.slate
+Install ZSH Prezto and customize
+--------------------------------
 
-Ctags
-    $ ln -s ~/.files/ctags ~/.ctags
+[Download and Follow setup instructions] (https://github.com/sorin-ionescu/prezto)
+ 
 
-Intall fonts
-    $ cp -f $HOME/.files/fonts/* $HOME/Library/Fonts
+Installation
+------------
 
-Customize
----------
-- Remap "caps lock" to "esc" using Seil
-- Remap "fn" to “Hyper” key also "Shift+Control+Option+Command" using Karabiner
-- Change Key repeat with Karabiner [Delay Until Repeat => 200, Key Repeat => 22]
-- Remap Alfred or Spotlight tp Ctr+Command+Space
+```
+git clone git@github.com:deens/.files.git ~/.files
+cd ~/.files
+./install.sh
+```
 
+When the scripts finish should open a Finder windows with two iTerm themes. Double click to install.
 
-Tools and Apps for development.
--------------------------------
-PHP
-   - PHP 
-   - Composer
-   - Boris
-   - VirtualBox
-   - Vagrant
-   - Sequel Pro
+Change iTerm theme
+----------------------------
 
-Python
-   - virtualenv 
-   - ipthon
-   - ipython notebook
-
-Ruby
-    - rvm
-
-TODO
-----
-- Create an install script.
+` Settings > Profiles > [select your profile] > Colors > Load Presents > gruvbox-dark`
 
 Credits & Thanks
-----------------
-- Yadr [https://github.com/skwp/dotfiles]
-- [http://msol.io/blog/tech/2014/03/10/work-more-efficiently-on-your-mac-for-developers/#seil]
+-----------------------
+
+- [Yadr](https://github.com/skwp/dotfiles)
+- [http://msol.io/blog/tech/2014/03/10/work-more-efficiently-on-your-mac-for-developers/](http://msol.io/blog/tech/2014/03/10/work-more-efficiently-on-your-mac-for-developers/#seil)
