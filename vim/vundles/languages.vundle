@@ -1,5 +1,9 @@
 Bundle "scrooloose/syntastic.git"
 
+" Snippets
+Bundle 'SirVer/ultisnips'
+Bundle "honza/vim-snippets"
+
 " Front End
 Bundle "pangloss/vim-javascript"
 Bundle "othree/javascript-libraries-syntax.vim"
@@ -11,28 +15,14 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'mattn/emmet-vim'
 Bundle 'chrisbra/Colorizer'
 
-" Snippets
-Bundle 'SirVer/ultisnips'
-Bundle "honza/vim-snippets"
-
 " PHP
-" Improve"
 Bundle 'StanAngeloff/php.vim'
 Bundle 'shawncplus/phpcomplete.vim'
-
-" Namespaces
 Bundle 'arnaud-lb/vim-php-namespace'
-
-" Indentantion
 Bundle '2072/PHP-Indenting-for-VIm'
-
-"Testing
 Bundle 'Herzult/phpspec-vim'
-
-" Laravel 
 Bundle 'xsbeats/vim-blade'
+Bundle 'stephpy/vim-php-cs-fixer'
 
 " Markdown
 Bundle 'tpope/vim-markdown'
-
-Bundle 'stephpy/vim-php-cs-fixer'

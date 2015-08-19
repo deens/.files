@@ -1,7 +1,6 @@
-" Color Themes
+" Color themes
 Bundle "morhetz/gruvbox"
-Bundle 'croaky/vim-colors-github'
-Bundle "chrisbra/color_highlight.git"
-Bundle "endel/vim-github-colorscheme.git"
+
+" Status line
 Bundle "itchyny/lightline.vim"
 Bundle "deens/lightline_gruvbox_theme"
