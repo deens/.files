@@ -27,3 +27,6 @@ mkdir -p ~/.fonts && cp ~/.files/fonts/* ~/.fonts
 echo "Install iTerm themes manually"
 cd $HOME/.files/iterms/
 open .
+
+echo "Install vim plugins"
+vim :BundleInstall
