@@ -5,10 +5,6 @@ let g:gruvbox_italic=0
 colorscheme gruvbox
 set background=dark
 
-" GUI Theme
-" colorscheme github256
-" set background=light
-
 if has("gui_running")
     "tell the term has 256 colors
     set t_Co=256
