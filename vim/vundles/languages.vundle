@@ -5,15 +5,15 @@ Bundle 'SirVer/ultisnips'
 Bundle "honza/vim-snippets"
 
 " Front End
-Bundle "pangloss/vim-javascript"
-Bundle "othree/javascript-libraries-syntax.vim"
-Bundle "groenewege/vim-less.git"
-Bundle "itspriddle/vim-jquery.git"
-Bundle "skwp/vim-html-escape"
-Bundle 'othree/html5.vim'
-Bundle 'hail2u/vim-css3-syntax'
+" Bundle "pangloss/vim-javascript"
+" Bundle "othree/javascript-libraries-syntax.vim"
+" Bundle "groenewege/vim-less.git"
+" Bundle "itspriddle/vim-jquery.git"
+" Bundle "skwp/vim-html-escape"
+" Bundle 'othree/html5.vim'
+" Bundle 'hail2u/vim-css3-syntax'
 Bundle 'mattn/emmet-vim'
-Bundle 'chrisbra/Colorizer'
+" Bundle 'chrisbra/Colorizer'
 
 " PHP
 Bundle 'StanAngeloff/php.vim'
@@ -22,7 +22,6 @@ Bundle 'arnaud-lb/vim-php-namespace'
 Bundle '2072/PHP-Indenting-for-VIm'
 Bundle 'Herzult/phpspec-vim'
 Bundle 'xsbeats/vim-blade'
-Bundle 'stephpy/vim-php-cs-fixer'
 
 " Markdown
 Bundle 'tpope/vim-markdown'
