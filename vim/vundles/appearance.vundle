@@ -2,5 +2,5 @@
 Bundle "morhetz/gruvbox"
 
 " Status line
-Bundle "itchyny/lightline.vim"
-Bundle "deens/lightline_gruvbox_theme"
+" Bundle "itchyny/lightline.vim"
+" Bundle "deens/lightline_gruvbox_theme"
